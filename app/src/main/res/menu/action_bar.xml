@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/registered"
+        android:icon="@mipmap/image16"
+        android:title="registered"
+        app:showAsAction="ifRoom" />
+
+    <item android:id="@+id/Notregistered"
+        android:icon="@mipmap/image15"
+        android:title="Notregistered"
+        app:showAsAction="ifRoom" />
+
+</menu>

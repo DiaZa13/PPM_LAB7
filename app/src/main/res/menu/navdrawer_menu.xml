@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/startFragment2"
+        android:icon="@mipmap/image13"
+        android:title="Inicio" />
+
+    <item
+        android:id="@+id/guestsFragment2"
+        android:icon="@mipmap/image19"
+        android:title="Invitados" />
+
+    <item
+        android:id="@+id/rolesFragment2"
+        android:icon="@mipmap/image24"
+        android:title="Roles" />
+
+
+    <item
+        android:id="@+id/aboutFragment"
+        android:icon="@mipmap/image12"
+        android:title="Acerca de" />
+
+
+</menu>

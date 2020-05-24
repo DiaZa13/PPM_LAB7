@@ -1,0 +1,10 @@
+<resources>
+
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="About">Soy una aplicación especializada en la administración del registro de invitados para cualquier tipo de evento</string>
+    <string name="app_name">LAB_4</string>
+    <string name="newName">Ingrese el nombre</string>
+    <string name="newPhone">Ingrese el teléfono</string>
+    <string name="newEmail">Ingrese el correo electrónico</string>
+    <string name="newDescrition">Ingrese la descripción</string>
+</resources>
