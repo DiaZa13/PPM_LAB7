@@ -9,7 +9,8 @@ data class Role(
     @PrimaryKey(autoGenerate = true) var Id: Int = 0,
     @NotNull val rolName: String,
     @NotNull val description: String,
-    @NotNull val order: String
+    @NotNull val order: String,
+    @NotNull val iconIndex: Int
 
 ) {
     override fun toString(): String {

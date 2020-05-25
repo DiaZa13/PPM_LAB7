@@ -7,5 +7,7 @@ data class GuestandRole (
     @Embedded
     val guest: Guest,
 
-    val rolName: String
+    val rolName: String,
+
+    val iconIndex: Int
 )

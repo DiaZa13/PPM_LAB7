@@ -17,41 +17,16 @@
         android:background="#FAF7F7"
         android:foregroundGravity="center">
 
-        <ScrollView
-            android:id="@+id/scrollView2"
-            android:layout_width="355dp"
-            android:layout_height="570dp"
-            android:layout_marginTop="36dp"
-            android:layout_marginBottom="24dp"
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/guestList"
+            android:layout_width="409dp"
+            android:layout_height="656dp"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent">
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical">
-
-                <TextView
-                    android:id="@+id/lblSubtitulo"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:background="@color/colorPrimary"
-                    android:fontFamily="@font/jockey_one"
-                    android:text="Invitados"
-                    android:textColor="#090909"
-                    android:textSize="30sp"
-                    android:textStyle="normal" />
-
-                <TextView
-                    android:id="@+id/lblDescripcion"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="@font/carrois_gothic"
-                    android:text="@{viewModel.guestText}" />
-
-            </LinearLayout>
-        </ScrollView>
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"/>
 
         <com.google.android.material.floatingactionbutton.FloatingActionButton
             android:id="@+id/btnNewguest"
@@ -65,10 +40,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="1"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/scrollView2"
-            app:layout_constraintVertical_bias="0.8"
             tools:ignore="MissingConstraints" />
-
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

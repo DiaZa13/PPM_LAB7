@@ -1,10 +1,7 @@
 package com.example.ppm_4.database
 
 import androidx.lifecycle.LiveData
-import androidx.room.Dao
-import androidx.room.Insert
-import androidx.room.Query
-import androidx.room.Update
+import androidx.room.*
 
 /**
  * Defines methods for using the SleepNight class with Room.
@@ -21,6 +18,8 @@ interface GuestDatabaseDao {
     @Update
     fun update(guest: Guest)
 
+    @Delete
+    fun delete(guest: Guest)
 
     @Query("SELECT * FROM guest_table ORDER BY Id ASC")
     fun getAllGuests(): LiveData<List<Guest>>
@@ -37,11 +36,11 @@ interface GuestDatabaseDao {
     @Query("SELECT g.*, r.rolName FROM guest_table g LEFT JOIN role_table r ON g.role_id = r.Id ORDER BY g.name")
     fun getGuestandRole(): LiveData<List<GuestandRole>>
 
-    @Query("DELETE FROM guest_table WHERE name = :name")
-    fun deleteGuest(name: String)
+    @Query("SELECT g.*, r.rolName FROM guest_table g LEFT JOIN role_table r ON g.role_id = r.Id WHERE Id = g.Id")
+    fun getOneGuestandRole(Id: Int): LiveData<GuestandRole>
 
-    @Query("DELETE FROM role_table WHERE rolName = :rolName")
-    fun deleteRole(rolName: String)
+    @Query("DELETE FROM role_table WHERE id = :Id")
+    fun deleteRole(Id : Int)
 
 
 }

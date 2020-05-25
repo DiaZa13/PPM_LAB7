@@ -46,6 +46,9 @@
         <action
             android:id="@+id/action_guestsFragment2_to_newguestFragment"
             app:destination="@id/newguestFragment" />
+        <action
+            android:id="@+id/action_guestsFragment2_to_editGuestFragment"
+            app:destination="@id/editGuestFragment" />
     </fragment>
     <fragment
         android:id="@+id/newguestFragment"
@@ -76,4 +79,9 @@
             app:destination="@id/rolesFragment2"
             app:popUpTo="@id/startFragment2" />
     </fragment>
+    <fragment
+        android:id="@+id/editGuestFragment"
+        android:name="com.example.ppm_4.editGuest.editGuestFragment"
+        android:label="Editar Guest"
+        tools:layout="@layout/fragment_editguest" />
 </navigation>

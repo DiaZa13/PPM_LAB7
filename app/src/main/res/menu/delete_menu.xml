@@ -4,7 +4,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <item
-        android:id="@+id/close"
+        android:id="@+id/delete"
         android:icon="@mipmap/image26"
         android:title="close"
         app:showAsAction="ifRoom" />
