@@ -33,8 +33,8 @@
 
         <TextView
             android:id="@+id/txtNombre"
-            android:layout_width="297dp"
-            android:layout_height="20dp"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
             android:layout_marginStart="10dp"
             android:layout_marginLeft="10dp"
             android:layout_marginTop="10dp"
@@ -49,52 +49,46 @@
             app:layout_constraintStart_toEndOf="@+id/roleIcon"
             app:layout_constraintTop_toTopOf="parent" />
 
+
         <TextView
             android:id="@+id/txtEmail"
-            android:layout_width="302dp"
-            android:layout_height="19dp"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
             android:layout_marginStart="10dp"
             android:layout_marginLeft="10dp"
-            android:layout_marginTop="2dp"
             android:layout_marginEnd="10dp"
             android:layout_marginRight="10dp"
             android:text="@{guest.guest.email}"
             android:textSize="18sp"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.75"
             app:layout_constraintStart_toEndOf="@+id/roleIcon"
             app:layout_constraintTop_toBottomOf="@+id/txtNombre" />
-
 
         <TextView
             android:id="@+id/txtPhone"
             android:layout_width="300dp"
-            android:layout_height="17dp"
+            android:layout_height="wrap_content"
             android:layout_marginStart="10dp"
             android:layout_marginLeft="10dp"
-            android:layout_marginTop="2dp"
             android:layout_marginEnd="10dp"
             android:layout_marginRight="10dp"
             android:text="@{guest.guest.phone}"
             android:textSize="18sp"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.666"
             app:layout_constraintStart_toEndOf="@+id/roleIcon"
             app:layout_constraintTop_toBottomOf="@+id/txtEmail" />
 
         <TextView
             android:id="@+id/txtRole"
-            android:layout_width="301dp"
-            android:layout_height="19dp"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
             android:layout_marginStart="10dp"
             android:layout_marginLeft="10dp"
-            android:layout_marginTop="2dp"
             android:layout_marginEnd="10dp"
             android:layout_marginRight="10dp"
             android:text="@{guest.rolName}"
             android:textSize="18sp"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.75"
             app:layout_constraintStart_toEndOf="@+id/roleIcon"
             app:layout_constraintTop_toBottomOf="@+id/txtPhone" />
     </androidx.constraintlayout.widget.ConstraintLayout>

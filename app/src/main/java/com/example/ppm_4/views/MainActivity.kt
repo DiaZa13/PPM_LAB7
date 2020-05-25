@@ -14,6 +14,7 @@ class MainActivity() : AppCompatActivity(){
     private lateinit var drawerLayout: DrawerLayout
 
     override fun onCreate(savedInstanceState: Bundle?) {
+        try{
         super.onCreate(savedInstanceState)
         val binding = DataBindingUtil.setContentView<ActivityMainBinding>(this, R.layout.activity_main)
         drawerLayout = binding.drawerLayout
@@ -22,6 +23,9 @@ class MainActivity() : AppCompatActivity(){
 
         NavigationUI.setupWithNavController(binding.navView, navController)
 
+    }catch(e: Exception){
+            e.printStackTrace()
+        }
     }
 
     override fun onSupportNavigateUp(): Boolean {

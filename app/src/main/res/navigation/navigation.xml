@@ -69,7 +69,7 @@
             android:id="@+id/action_rolesFragment2_to_newroleFragment2"
             app:destination="@id/newroleFragment2" />
         <action
-            android:id="@+id/action_rolesFragment2_to_editRoleFragment2"
+            android:id="@+id/action_rolesFragment2_to_editRoleFragment"
             app:destination="@id/editRoleFragment" />
     </fragment>
     <fragment
@@ -87,9 +87,6 @@
         android:name="com.example.ppm_4.editGuest.editGuestFragment"
         android:label="Editar Guest"
         tools:layout="@layout/fragment_editguest" >
-        <argument
-            android:name="guestId"
-            app:argType="Int" />
         <action
             android:id="@+id/action_editGuestFragment_to_guestsFragment2"
             app:destination="@id/guestsFragment2" />
@@ -98,7 +95,8 @@
     <fragment
         android:id="@+id/editRoleFragment"
         android:name="com.example.ppm_4.editRole.editRoleFragment"
-        android:label="editRoleFragment" >
+        android:label="fragment_editrole"
+        tools:layout="@layout/fragment_editrole" >
         <action
             android:id="@+id/action_editRoleFragment_to_rolesFragment2"
             app:destination="@id/rolesFragment2" />

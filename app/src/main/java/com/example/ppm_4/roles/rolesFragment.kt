@@ -48,7 +48,7 @@ class rolesFragment : Fragment() {
 
         viewModel.roleClicked.observe(viewLifecycleOwner, Observer {
             if(it != null){
-                view?.findNavController()?.navigate(R.id.action_rolesFragment2_to_editRoleFragment2)
+                view?.findNavController()?.navigate(R.id.action_rolesFragment2_to_editRoleFragment)
             }
         })
 
