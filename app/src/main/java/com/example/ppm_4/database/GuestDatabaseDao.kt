@@ -27,17 +27,18 @@ interface GuestDatabaseDao {
     @Query("SELECT * FROM role_table ORDER BY Id ASC")
     fun getAllRoles(): LiveData<List<Role>>
 
+
     @Query("SELECT COUNT(*) FROM guest_table")
     fun getGuestsCount(): LiveData<Int>
 
     @Query("SELECT COUNT(*) FROM guest_table WHERE registered = 1 ")
     fun getRegisteredGuests(): LiveData<Int>
 
-    @Query("SELECT g.*, r.rolName FROM guest_table g LEFT JOIN role_table r ON g.role_id = r.Id ORDER BY g.name")
+    @Query("SELECT g.*, r.rolName, r.iconIndex FROM guest_table g LEFT JOIN role_table r ON g.role_id = r.Id ORDER BY g.name")
     fun getGuestandRole(): LiveData<List<GuestandRole>>
 
-    @Query("SELECT g.*, r.rolName FROM guest_table g LEFT JOIN role_table r ON g.role_id = r.Id WHERE Id = g.Id")
-    fun getOneGuestandRole(Id: Int): LiveData<GuestandRole>
+    @Query("SELECT g.*, r.rolName, r.iconIndex FROM guest_table g LEFT JOIN role_table r ON g.role_id = r.Id WHERE g.Id = :id")
+    fun getOneGuestandRole(id: Int): LiveData<GuestandRole>
 
     @Query("DELETE FROM role_table WHERE id = :Id")
     fun deleteRole(Id : Int)

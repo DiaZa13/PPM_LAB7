@@ -10,7 +10,7 @@ data class Role(
     @NotNull val rolName: String,
     @NotNull val description: String,
     @NotNull val order: String,
-    @NotNull val iconIndex: Int
+    val iconIndex: Int
 
 ) {
     override fun toString(): String {

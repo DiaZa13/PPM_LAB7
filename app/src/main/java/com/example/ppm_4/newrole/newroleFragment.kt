@@ -69,7 +69,8 @@ class newroleFragment : Fragment() {
                 Toast.makeText(activity, "Llene todos los campos proporcionados", Toast.LENGTH_SHORT).show()
             }else{
                 // User chose the "Settings" item, show the app settings UI...
-                viewModel.insertRole()
+                val index: Int = txtIcon.getText().toString().toInt()
+                viewModel.insertRole(index)
                 view?.findNavController()?.navigate(R.id.action_newroleFragment2_to_rolesFragment2)}
 
             true

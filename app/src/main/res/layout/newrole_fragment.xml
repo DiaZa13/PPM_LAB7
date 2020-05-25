@@ -21,8 +21,8 @@
             android:id="@+id/imageView2"
             android:layout_width="50dp"
             android:layout_height="50dp"
-            android:layout_marginStart="48dp"
-            android:layout_marginLeft="48dp"
+            android:layout_marginStart="36dp"
+            android:layout_marginLeft="36dp"
             android:layout_marginTop="108dp"
             android:src="@mipmap/image3"
             app:layout_constraintStart_toStartOf="parent"
@@ -32,9 +32,9 @@
             android:id="@+id/imageView3"
             android:layout_width="50dp"
             android:layout_height="50dp"
-            android:layout_marginStart="44dp"
-            android:layout_marginLeft="44dp"
-            android:layout_marginTop="28dp"
+            android:layout_marginStart="36dp"
+            android:layout_marginLeft="36dp"
+            android:layout_marginTop="24dp"
             android:src="@mipmap/image25"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/imageView2" />
@@ -71,7 +71,7 @@
             android:id="@+id/imageView"
             android:layout_width="188dp"
             android:layout_height="129dp"
-            android:layout_marginTop="448dp"
+            android:layout_marginTop="472dp"
             android:src="@mipmap/image20"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.497"
@@ -80,28 +80,42 @@
 
         <SeekBar
             android:id="@+id/sbOrden"
-            android:layout_width="294dp"
-            android:layout_height="50dp"
-            android:layout_marginTop="320dp"
+            android:layout_width="310dp"
+            android:layout_height="47dp"
+            android:layout_marginTop="300dp"
+            android:max="10"
+            android:theme="@style/Widget.AppCompat.SeekBar.Discrete"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.495"
+            app:layout_constraintHorizontal_bias="0.358"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            tools:ignore="MissingConstraints"
-            android:max="10"
-            android:theme="@style/Widget.AppCompat.SeekBar.Discrete"/>
+            tools:ignore="MissingConstraints" />
 
         <TextView
             android:id="@+id/textView4"
+            android:layout_width="186dp"
+            android:layout_height="51dp"
+            android:layout_marginTop="364dp"
+            android:fontFamily="@font/carrois_gothic"
+            android:text="Ingrese el index del icono del nuevo rol"
+            android:textColor="#070707"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.163"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textView6"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="264dp"
+            android:layout_marginTop="260dp"
             android:fontFamily="@font/carrois_gothic"
             android:text="Seleccione un orden"
             android:textColor="#070707"
             android:textSize="20sp"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.182"
+            app:layout_constraintHorizontal_bias="0.156"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -109,7 +123,7 @@
             android:id="@+id/txtOrder"
             android:layout_width="64dp"
             android:layout_height="49dp"
-            android:layout_marginTop="252dp"
+            android:layout_marginTop="248dp"
             android:fontFamily="@font/carrois_gothic"
             android:gravity="center"
             android:text="@={viewModel.order}"
@@ -117,7 +131,19 @@
             android:textSize="30sp"
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.148"
+            app:layout_constraintHorizontal_bias="0.076"
+            app:layout_constraintStart_toEndOf="@+id/textView6"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/txtIcon"
+            android:layout_width="99dp"
+            android:layout_height="44dp"
+            android:layout_marginTop="368dp"
+            android:ems="10"
+            android:inputType="number"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.123"
             app:layout_constraintStart_toEndOf="@+id/textView4"
             app:layout_constraintTop_toTopOf="parent" />
 

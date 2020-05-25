@@ -1,5 +1,6 @@
 package com.example.ppm_4.database
 
+import androidx.annotation.Nullable
 import androidx.room.Embedded
 
 data class GuestandRole (
@@ -9,5 +10,5 @@ data class GuestandRole (
 
     val rolName: String,
 
-    val iconIndex: Int
+    @Nullable val iconIndex: Int
 )

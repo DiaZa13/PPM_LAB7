@@ -1,17 +1,15 @@
 package com.example.ppm_4.editGuest
 
-import androidx.lifecycle.ViewModelProviders
 import android.os.Bundle
 import android.view.*
 import androidx.fragment.app.Fragment
 import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.ViewModelProvider
-import androidx.navigation.findNavController
 import androidx.navigation.fragment.navArgs
 import com.example.ppm_4.R
 import com.example.ppm_4.database.GuestDatabase
 import com.example.ppm_4.databinding.FragmentEditguestBinding
-import com.example.ppm_4.databinding.FragmentGuestsBinding
+
 
 
 class editGuestFragment : Fragment() {
@@ -28,7 +26,7 @@ class editGuestFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         binding = DataBindingUtil.inflate(inflater, R.layout.fragment_editguest, container, false)
-        binding.setLifecycleOwner(this)
+
 
         setHasOptionsMenu(true)
         return binding.root
@@ -40,12 +38,12 @@ class editGuestFragment : Fragment() {
 
         val application = requireNotNull(this.activity).application
         val dataSource = GuestDatabase.getInstance(application).GuestDatabaseDao
-        val editGuestFragmentArgs by navArgs<editGuestFragmentArgs>()
+       // val editGuestFragmentArgs by navArgs<editGuestFragmentArgs>()
 
-        viewModelFactory = EditGuestViewModelFactory(dataSource, editGuestFragmentArgs.Id)
-        viewModel = ViewModelProvider(this, viewModelFactory).get(EditGuestViewModel::class.java)
+        //viewModelFactory = EditGuestViewModelFactory(dataSource, editGuestFragmentArgs.Id)
+       // viewModel = ViewModelProvider(this, viewModelFactory).get(EditGuestViewModel::class.java)
 
-        binding.viewModel = viewModel
+        //binding.viewModel = viewModel
 
     }
 

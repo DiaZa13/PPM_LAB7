@@ -13,11 +13,13 @@ class NewroleViewModel(val database: GuestDatabaseDao) : ViewModel() {
     val name = MutableLiveData<String>()
     val description = MutableLiveData<String>()
     val order = MutableLiveData<String>()
+    val iconIndex = MutableLiveData<Int>()
 
     private val viewModelJob = Job()
     private val uiScope = CoroutineScope(Dispatchers.Main + viewModelJob)
 
-    fun insertRole() {
+    fun insertRole(index: Int) {
+        iconIndex.value = index
         uiScope.launch {
             insert()
         }
@@ -25,7 +27,7 @@ class NewroleViewModel(val database: GuestDatabaseDao) : ViewModel() {
 
     private suspend fun insert(){
         withContext(Dispatchers.IO) {
-            database.insert(Role(rolName = name.value?:"",description = description.value?:"", order = order.value?:""))
+            database.insert(Role(rolName = name.value?:"",description = description.value?:"", order = order.value?:"",iconIndex = iconIndex.value?: 0))
         }
     }
 

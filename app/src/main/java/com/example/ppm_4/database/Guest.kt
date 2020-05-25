@@ -11,11 +11,7 @@ import org.jetbrains.annotations.NotNull
 @Entity(tableName = "guest_table",
         foreignKeys = [
             ForeignKey(entity = Role::class, parentColumns = ["Id"], childColumns = ["role_id"], onDelete = SET_DEFAULT)
-        ],
-        indices = [
-        Index(name = "roleId", value = ["role_id"])
         ])
-
 
 data class Guest(
     @PrimaryKey(autoGenerate = true)  var Id: Int = 0,

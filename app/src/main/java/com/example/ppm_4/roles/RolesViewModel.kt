@@ -1,26 +1,24 @@
 package com.example.ppm_4.roles
 
-import androidx.lifecycle.Transformations
+import androidx.lifecycle.LiveData
+import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.example.ppm_4.database.GuestDatabaseDao
-import com.example.ppm_4.database.Role
-import java.lang.StringBuilder
 
 class RolesViewModel(val database:GuestDatabaseDao): ViewModel() {
     // TODO: Implement the ViewModel
 
-    private val roles = database.getAllRoles()
+    val roles = database.getAllRoles()
 
-    val rolesText = Transformations.map(roles) {
-        buildGuestText(it)
+    private val _roleClicked = MutableLiveData<Int>()
+    val roleClicked: LiveData<Int>
+        get() = _roleClicked
+
+    fun onRoleClicked(guestId: Int){
+        _roleClicked.value = guestId
     }
 
-    private fun buildGuestText(roles: List<Role>) : String{
-        val rolesText = StringBuilder()
-        for (rol in roles){
-            rolesText.append("Rol: ${rol.Id}\nNombre: ${rol.rolName}\nDescripcion: ${rol.description}\n" +
-                    "Orden: ${rol.order}\n\n")
-        }
-        return rolesText.toString()
+    fun onRoleClickedComplete(){
+        _roleClicked.value = null
     }
 }

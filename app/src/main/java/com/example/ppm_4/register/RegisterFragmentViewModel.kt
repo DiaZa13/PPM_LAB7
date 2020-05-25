@@ -42,7 +42,7 @@ class RegisterFragmentViewModel(val database: GuestDatabaseDao) : ViewModel() {
         guestIndex++
         if (totalGuests >= guestIndex) {
             actualGuest.value = guests.value?.get(guestIndex - 1)
-            guest?.guest?.registered = true
+
         } else {
             _registerComplete.value = true
         }
